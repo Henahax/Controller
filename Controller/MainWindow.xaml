@@ -1,0 +1,39 @@
+﻿<Window x:Class="Controller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controller"
+        mc:Ignorable="d"
+        Title="controller vibration test" Height="200" Width="300" MaxHeight="200" MinHeight="200" MaxWidth="300" MinWidth="300">
+    <Grid>
+        <GroupBox Header="vibration">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <GroupBox Header="left motor" Grid.Column="0" Grid.Row="0">
+                    <Slider x:Name="sliderLeftMotor" Maximum="1" TickPlacement="BottomRight" TickFrequency="0.1" IsSnapToTickEnabled="True" ValueChanged="LeftMotorChanged" VerticalAlignment="Center"/>
+                </GroupBox>
+                <GroupBox Header="left trigger" Grid.Column="0" Grid.Row="1">
+                    <Slider x:Name="sliderLeftTrigger" Maximum="1" TickPlacement="BottomRight" TickFrequency="0.1" IsSnapToTickEnabled="True" ValueChanged="LeftTriggerChanged" VerticalAlignment="Center"/>
+
+                </GroupBox>
+                <GroupBox Header="right motor" Grid.Column="1" Grid.Row="0">
+                    <Slider x:Name="sliderRightMotor" Maximum="1" TickPlacement="BottomRight" TickFrequency="0.1" IsSnapToTickEnabled="True" ValueChanged="RightMotorChanged" VerticalAlignment="Center"/>
+                </GroupBox>
+                <GroupBox Header="right trigger" Grid.Column="1" Grid.Row="1">
+                    <Slider x:Name="sliderRightTrigger" Maximum="1" TickPlacement="BottomRight" TickFrequency="0.1" IsSnapToTickEnabled="True" ValueChanged="RightTriggerChanged" VerticalAlignment="Center"/>
+
+                </GroupBox>
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
